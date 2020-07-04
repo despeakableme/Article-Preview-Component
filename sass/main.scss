@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 47%;
+    background-color: #fff;
+    height: 30%;
+    border-radius: 10px;
+    display: table;
+
+    &__left {
+        background-image: url(../assets/images/drawers.jpg);
+        width: 36%;
+        height: 100%;
+        background-position: left;
+        background-size: cover;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        display: table-cell;
+    }
+
+    &__right {
+        width: 60%;
+        display: table-cell;
+        padding: 1.4rem;
+    }
+
+    &__text {
+        &-heading {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: hsl(217, 19%, 35%);
+            margin-bottom: .8rem;
+        }
+
+        &-body {
+            font-size: .8rem;
+            font-weight: 500;
+            color: hsl(214, 17%, 51%);
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        margin-top: 1rem;
+        justify-content: space-between;
+
+        &-avatar {
+            height: 2rem;
+            width: 2rem;
+            border-radius: 50%;
+            float: left;
+
+            &--text {
+                float: left;
+                color: hsl(217, 19%, 35%);
+                margin-left: 1rem;
+                font-size: .7rem;
+                display: flex;
+                flex-direction: column;
+            }
+
+            &--name {
+                font-weight: 700;
+            }
+
+            &--date {
+                font-weight: 500;
+                color: hsl(212, 23%, 69%);
+            }
+        }
+
+        &-share {
+            align-self: center;
+            padding: .4rem;
+            border-radius: 50%;
+            background-color: hsl(210, 46%, 95%);
+        }
+    }
+}
